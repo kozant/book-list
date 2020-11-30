@@ -1,0 +1,1 @@
+export const CREATE_BOOK = "BOOK/CREATE_POST";
