@@ -36,7 +36,7 @@ const BookForm = ({createBook}) => {
                         <input type="text" placeholder="Введите текст"
                                name="name"
                                className="form-control" id="name"
-                               ref={register({required: true, pattern: /^[A-Za-zА-Я]+$/i})}/>
+                               ref={register({required: true, pattern: /^[A-Za-zА-Я\s]+$/i})}/>
                         {errors.name && errors.name.type === "required" &&
                         <span className="ml-2" style={{color: "red"}}>*Обязательное поле</span>}
                         {errors.name && errors.name.type === "pattern" &&
@@ -50,7 +50,7 @@ const BookForm = ({createBook}) => {
                         <input type="text" placeholder="Введите текст"
                                name="author"
                                className="form-control" id="author"
-                               ref={register({required: true, pattern: /^[A-Za-zА-Я]+$/i})}/>
+                               ref={register({required: true, pattern: /^[A-Za-zА-Я\s]+$/i})}/>
                         {errors.author && errors.author.type === "required" &&
                         <span className="ml-2" style={{color: "red"}}>*Обязательное поле</span>}
                         {errors.author && errors.author.type === "pattern" &&
